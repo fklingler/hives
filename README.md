@@ -10,7 +10,7 @@ In production it also serves the Vue.js frontend statically, that is built in th
 
 ## Vue.js Frontend
 
-Setup using Vite in the `app/frontend` folder, the Vue.js application handles the frontend and makes calls to the API using the native Fetch API.
+The Vue.js application handles the frontend and makes calls to the API using the native Fetch API. It is setup using Vite in the `app/frontend` folder.
 
 A simple event emitter using [mitt](https://github.com/developit/mitt) has been setup to allow simple communication between components.
 
@@ -28,7 +28,7 @@ Then, to execute the servers, you need to run:
 
 ## Tests
 
-Ruby on Rails tests can be run using `bin/rails test`
+Ruby on Rails tests can be run using `bin/rails test`.
 
 ## Deployment
 
@@ -37,4 +37,4 @@ This rake task is automatically executed when deploying to a service like Scalin
 
 ## Development
 
-Commits follow the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) naming convention
+Commits follow the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) naming convention.
