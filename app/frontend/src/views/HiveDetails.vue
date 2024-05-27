@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import { useRoute } from 'vue-router';
-
-const id = useRoute().params.id;
+import HiveDetails from '@/components/HiveDetails.vue'
 </script>
 
 <template>
   <main>
-    Hive {{ id }}
+    <RouterLink :to="{ name: 'hives' }">Back to hives list</RouterLink>
+
+    <HiveDetails />
   </main>
 </template>
