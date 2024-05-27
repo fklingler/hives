@@ -16,7 +16,12 @@ A simple event emitter using [mitt](https://github.com/developit/mitt) has been 
 
 ## Execution
 
-In development, you need to run two commands:
+In order to run the project in development, first install dependencies:
+
+- `bundle install`
+- `cd app/frontend && npm install`
+
+Then, to execute the servers, you need to run:
 
 - `bin/rails s` runs the API server
 - `cd app/frontend && npm run dev` runs the frontend dev server
