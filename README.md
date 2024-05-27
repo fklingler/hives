@@ -1,24 +1,35 @@
-# README
+# Hives
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a small demo project in Ruby on Rails and Vue.js, where users can register hives and display the list of all hives registered.
 
-Things you may want to cover:
+## Ruby on Rails API
 
-* Ruby version
+The Ruby on Rails application has been configured in API mode, and provides a simple CRUD API for the "hives" resource.
 
-* System dependencies
+In production it also serves the Vue.js frontend statically, that is built in the `/public` folder.
 
-* Configuration
+## Vue.js Frontend
 
-* Database creation
+Setup using Vite in the `app/frontend` folder, the Vue.js application handles the frontend and makes calls to the API using the native Fetch API.
 
-* Database initialization
+A simple event emitter using [mitt](https://github.com/developit/mitt) has been setup to allow simple communication between components.
 
-* How to run the test suite
+## Execution
 
-* Services (job queues, cache servers, search engines, etc.)
+In development, you need to run two commands:
 
-* Deployment instructions
+- `bin/rails s` runs the API server
+- `cd app/frontend && npm run dev` runs the frontend dev server
 
-* ...
+## Tests
+
+Ruby on Rails tests can be run using `bin/rails test`
+
+## Deployment
+
+The Vue.js app is automatically built in the `/public` folder when executing the `assets:precompile` rake task.
+This rake task is automatically executed when deploying to a service like Scalingo.
+
+## Development
+
+Commits follow the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) naming convention
