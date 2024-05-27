@@ -2,6 +2,7 @@
 task :build_frontend do
   # In the frontend app folder, we need to run the 'build' npm script
   Dir.chdir(Rails.root.join('app', 'frontend')) do
+    system('npm install')
     system('npm run build')
   end
 end
